@@ -4,6 +4,7 @@
 brew install grep --with-default-names
 brew install gzip
 brew install wget
+brew tap caskroom/cask
 
 brew install make
 brew install vim --override-system-vi
