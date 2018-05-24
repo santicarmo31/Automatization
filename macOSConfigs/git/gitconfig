@@ -1,0 +1,21 @@
+[user]
+	name = Santiago Carmona Gonzalez
+	email = dev.santicarmo31@gmail.com
+[color]
+	ui = true
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	tree = log --graph --pretty
+	ll = log --stat --abbrev-commit
+[core]
+	compression = 9
+	editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
+[push]
+	default = current
+[credential]
+      helper = osxkeychain
