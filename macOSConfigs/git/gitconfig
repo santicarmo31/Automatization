@@ -9,6 +9,9 @@
 	br = branch
 	tree = log --graph --pretty
 	ll = log --stat --abbrev-commit
+	da = !git add --all && git reset --hard
+	dev = !git checkout dev && git pull origin dev
+
 [core]
 	compression = 9
 	editor = vim
