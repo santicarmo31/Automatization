@@ -10,8 +10,9 @@
 	tree = log --graph --pretty
 	ll = log --stat --abbrev-commit
 	da = !git add --all && git reset --hard
-	dev = !git checkout dev && git pull origin dev
-
+	dev = !git checkout develop && git pull origin develop
+	pod = !git pull origin develop
+	upb = !git log --branches --not --remotes --no-walk --decorate --oneline
 [core]
 	compression = 9
 	editor = vim
