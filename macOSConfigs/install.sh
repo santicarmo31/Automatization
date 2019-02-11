@@ -8,31 +8,6 @@
 #
 
 
-if hash brew; then
-  echo "Please wait... Homebrew is updating Formulas..."
-  brew update
-
-  echo "Installing programs..."
-
-  ./install-gnu-utils.sh
-
-  echo "Done..."
-else
-  echo "You don't have Homewbrew."
-  echo "Please wait... We'll install Homewbrew..."
-
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  source ~/.bash_profile 2> /dev/null
-  source ~/.zshrc 2> /dev/null
-  echo "Reloaded Shell"
-  echo "Installing programs..."
-
-  ./install-gnu-utils.sh 2>&1 > /dev/null
-
-  echo "Done..."
-fi
-
 if [ ! -d $HOME/.oh-my-zsh ]; then
   echo "You don't have Oh My ZSH."
   echo "Please wait... We'll install ZSH"
