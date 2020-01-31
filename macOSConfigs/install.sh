@@ -12,11 +12,20 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
   echo "You don't have Oh My ZSH."
   echo "Please wait... We'll install ZSH"
 
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
   chsh -s /bin/zsh
 else
   cat zsh/zshrc > $HOME/.zshrc
-  echo "ZSH was installed succesful..."
+  echo "ZSH was installed succesfull..."
+fi
+
+if [[ $(command -v brew) == "" ]]; then
+    echo "Installing Homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    echo "Updating Homebrew"
+    brew update
 fi
 
 if hash rvm; then
