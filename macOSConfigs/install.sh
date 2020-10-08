@@ -28,37 +28,6 @@ else
     brew update
 fi
 
-if hash rvm; then
-  echo "Your Ruby current version is:"
-  ruby --version
-  echo " > Ruby is hosted in:"
-  which ruby
-else
-  echo "You don't have RVM."
-  echo "Please wait... We'll install RVM..."
-
-  \curl -sSL https://get.rvm.io | bash -s stable
-
-  source ~/.bash_profile 2> /dev/null
-  source ~/.zshrc 2> /dev/null
-  echo "Reloaded Shell"
-
-  rvm install ruby --latest
-  rvm use ruby --latest --default
-
-  source ~/.bash_profile 2> /dev/null
-  source ~/.zshrc 2> /dev/null
-  echo "Reloaded Shell"
-
-  echo "Done..."
-  echo
-
-  echo "Your Ruby current version is:"
-  ruby --version
-  echo " > Ruby is hosted in:"
-  which ruby
-fi
-
 echo "Installing macOS Applications"
 ./install-macos-applications.sh
 
