@@ -14,12 +14,11 @@
 	dev = !git checkout develop && git pull origin develop
 	pod = !git pull origin develop
 	upb = !git log --branches --not --remotes --no-walk --decorate --oneline
-	branches = !git for-each-ref --sort='-committerdate:iso8601' --format=' %(committerdate:iso8601)%09%(refname)' refs/heads
 [core]
 	compression = 9
 	editor = vim
-  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/.gitignore
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
 [push]
 	default = current
 [pull]
