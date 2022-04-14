@@ -21,4 +21,7 @@ fi
 echo "👨‍💻 Installing Git configuration 👨‍💻"
 ./install-git-configuration.sh
 
+echo "👨‍💻 Installing HomeBrew configuration 👨‍💻"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 echo "Done: Please restart Terminal app"
