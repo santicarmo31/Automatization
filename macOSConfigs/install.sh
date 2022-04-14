@@ -15,7 +15,6 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
 
   chsh -s /bin/zsh # Change login shell
 else
-  cat zsh/zshrc > $HOME/.zshrc
   echo "ZSH was installed succesfull..."
 fi
 
