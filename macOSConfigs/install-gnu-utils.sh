@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-brew install carthage
-brew install cocoapods
+gem install cocoapods -v 1.13.0
